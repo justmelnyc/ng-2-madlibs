@@ -1,15 +1,15 @@
 import {
-  beforeEachProviders,
-  describe,
-  expect,
-  it,
+  addProviders,
   inject
 } from '@angular/core/testing';
+
 import { MadlibsAppComponent } from '../app/madlibs.component';
 
-beforeEachProviders(() => [MadlibsAppComponent]);
 
 describe('App: Madlibs', () => {
+  beforeEach(() => {
+    addProviders([ MadlibsAppComponent ])
+  })
   it('should create the app',
       inject([MadlibsAppComponent], (app: MadlibsAppComponent) => {
     expect(app).toBeTruthy();
