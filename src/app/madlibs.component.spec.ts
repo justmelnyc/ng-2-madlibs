@@ -17,6 +17,6 @@ describe('App: Madlibs', () => {
 
   it('should have as title \'madlibs works!\'',
       inject([MadlibsAppComponent], (app: MadlibsAppComponent) => {
-    expect(app.title).toEqual('madlibs works!');
+    expect(app.title).toEqual('Automate This!');
   }));
 });
