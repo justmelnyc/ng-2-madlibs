@@ -3,10 +3,12 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { MadlibsFormComponent } from './madlibs-form/madlibs-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MadlibsFormComponent
   ],
   imports: [
     BrowserModule,

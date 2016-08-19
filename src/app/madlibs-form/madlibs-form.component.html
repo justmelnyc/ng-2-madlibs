@@ -1,3 +1,70 @@
-<p>
-  madlibs-form works!
-</p>
+<form #storyForm="ngForm" (ngSubmit)="showStory(model)" *ngIf="!submitted">
+  <p>
+    <input name="name"
+           type="text"
+           [(ngModel)]="model.name"
+           placeholder="male name">
+  </p>
+  <p>
+    <input name="job"
+           type="text"
+           [(ngModel)]="model.job"
+           placeholder="job title">
+  </p>
+  <p>
+    <input name="tedious task"
+           type="text"
+           [(ngModel)]="model.tediousTask"
+           placeholder="tedious task">
+  </p>
+  <p>
+    <input name="dirty task"
+           type="text"
+           [(ngModel)]="model.dirtyTask"
+           placeholder="dirty task">
+  </p>
+  <p>
+    <input name="celebrity"
+           type="text"
+           [(ngModel)]="model.celebrity"
+           placeholder="celebrity">
+  </p>
+  <p>
+    <input name="useless skill"
+           type="text"
+           [(ngModel)]="model.uselessSkill"
+           placeholder="useless skill">
+  </p>
+  <p>
+    <input name="obnoxious celebrity"
+           type="text"
+           [(ngModel)]="model.obnoxiousCelebrity"
+           placeholder="obnoxious celebrity">
+  </p>
+  <p>
+    <input name="huge number"
+           type="number"
+           [(ngModel)]="model.hugeNumber"
+           placeholder="huge number">
+  </p>
+  <p>
+    <input name="adjective"
+           type="text"
+           [(ngModel)]="model.adjective"
+           placeholder="adjective">
+  </p>
+
+  <input type="submit" value="Show me the lols">
+</form>
+
+<div *ngIf="submitted">
+  <p>{{model.name}} was a {{model.job}} who loved technology.</p>
+  <p>Although he loved parts of his job, he absolutely hated
+  {{model.tediousTask}} and {{model.dirtyTask}}. So {{model.name}} met with his
+  life mentor {{model.celebrity}} who told him to learn Angular2-rc.5 (aka
+  {{model.uselessSkill}})</p>
+  <p>Wow! With his new skills, {{model.name}} build a(n) {{model.adjective}}
+  robot named {{model.obnoxiousCelebrity}} that not only loved {{model.dirtyTask}}
+  but did it {{model.hugeNumber}} times faster.</p>
+  <button (click)="reset()">Try again</button>
+</div>

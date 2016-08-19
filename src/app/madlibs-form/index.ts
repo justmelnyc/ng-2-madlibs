@@ -1,1 +1,1 @@
-export { MadlibsFormComponent } from './madlibs-form.component';
+export * from './madlibs-form.component';
